@@ -19,5 +19,7 @@ jobs:
         
       - uses: ncipollo/release-action@v1
         with:
+          commit: main
+          tag: latest
           artifacts: grafana-config.zip
           token: ${{ secrets.GITHUB_TOKEN }}
