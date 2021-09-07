@@ -4,13 +4,13 @@ datasources:
   - name: Prometheus
     type: prometheus
     access: proxy
-    url: http://cortex_query_frontend/api/prom
+    url: http://localhost:9090/api/prom
 
   - name: Loki
     type: loki
     uid: Loki
     access: proxy
-    url: http://loki_query_frontend
+    url: http://localhost:9091
     jsonData:
       maxLines: 5000
       derivedFields:
@@ -24,7 +24,7 @@ datasources:
     type: tempo
     uid: tempo
     access: proxy
-    url: http://tempo-query:16686
+    url: http://localhost:16686
     jsonData:
       tracesToLogs:
         datasourceUid: Loki
