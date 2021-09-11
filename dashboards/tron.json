@@ -21,7 +21,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 1,
-  "id": null,
+  "id": 6,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -68,7 +68,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "tron_token_total_balance/1000000",
+          "expr": "sum by(address) (tron_token_total_balance) / 1000000",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -158,7 +158,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "tron_token_total_holders",
+          "expr": "sum by(address) (tron_token_total_holders)",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -248,7 +248,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "tron_token_total_transactions",
+          "expr": "sum by(address) (tron_token_total_transactions)",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -338,7 +338,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "tron_token_holder_balance{address=\"TKM9AYxWxRe7hESuWmKFXwcDjnb5cQK92E\"}/1000000",
+          "expr": "sum by(address) (tron_token_holder_balance{address=\"TKM9AYxWxRe7hESuWmKFXwcDjnb5cQK92E\"}) / 1000000",
           "interval": "",
           "intervalFactor": 1,
           "legendFormat": "{{address}}",
@@ -431,7 +431,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "tron_token_holder_balance{address=\"TUPmayJ5CWWKjYFVmML2ycKXMCbyKbgtML\"}/1000000",
+          "expr": "sum by(address) (tron_token_holder_balance{address=\"TUPmayJ5CWWKjYFVmML2ycKXMCbyKbgtML\"}) / 1000000",
           "interval": "",
           "intervalFactor": 1,
           "legendFormat": "{{address}}",
@@ -525,7 +525,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "tron_token_holder_balance{address=\"TBmKCtscG34xEgQdCTRMvRMKfyoABHqesx\"}/1000000",
+          "expr": "sum by(address) (tron_token_holder_balance{address=\"TBmKCtscG34xEgQdCTRMvRMKfyoABHqesx\"}) / 1000000",
           "interval": "",
           "intervalFactor": 1,
           "legendFormat": "{{address}}",
@@ -619,7 +619,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "tron_token_holder_balance{address!~\"TBmKCtscG34xEgQdCTRMvRMKfyoABHqesx|TUPmayJ5CWWKjYFVmML2ycKXMCbyKbgtML|TKM9AYxWxRe7hESuWmKFXwcDjnb5cQK92E\"}/1000000",
+          "expr": "sum by(address) (tron_token_holder_balance{address!~\"TBmKCtscG34xEgQdCTRMvRMKfyoABHqesx|TUPmayJ5CWWKjYFVmML2ycKXMCbyKbgtML|TKM9AYxWxRe7hESuWmKFXwcDjnb5cQK92E\"}) / 1000000",
           "interval": "",
           "intervalFactor": 1,
           "legendFormat": "{{address}}",
@@ -685,5 +685,5 @@
   "timezone": "",
   "title": "Tron Dashboard",
   "uid": "tron_dashboard",
-  "version": 0
+  "version": 1
 }
