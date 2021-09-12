@@ -68,7 +68,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "sum by(address) (tron_token_total_balance) / 1000000",
+          "expr": "sum by(address) (tron_token_total_balance) / 1000000000",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -94,7 +94,8 @@
       },
       "yaxes": [
         {
-          "format": "short",
+          "$$hashKey": "object:522",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -102,6 +103,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:523",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -184,7 +186,8 @@
       },
       "yaxes": [
         {
-          "format": "short",
+          "$$hashKey": "object:624",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -192,6 +195,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:625",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -431,7 +435,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "sum by(address) (tron_token_holder_balance{address=\"TUPmayJ5CWWKjYFVmML2ycKXMCbyKbgtML\"}) / 1000000",
+          "expr": "sum by(address) (tron_token_holder_balance{address=\"TUPmayJ5CWWKjYFVmML2ycKXMCbyKbgtML\"}) / 1000000000",
           "interval": "",
           "intervalFactor": 1,
           "legendFormat": "{{address}}",
@@ -584,7 +588,7 @@
       "fill": 0,
       "fillGradient": 0,
       "gridPos": {
-        "h": 12,
+        "h": 35,
         "w": 24,
         "x": 0,
         "y": 16
@@ -597,7 +601,7 @@
         "max": false,
         "min": false,
         "rightSide": true,
-        "show": true,
+        "show": false,
         "total": false,
         "values": false
       },
@@ -619,7 +623,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "sum by(address) (tron_token_holder_balance{address!~\"TBmKCtscG34xEgQdCTRMvRMKfyoABHqesx|TUPmayJ5CWWKjYFVmML2ycKXMCbyKbgtML|TKM9AYxWxRe7hESuWmKFXwcDjnb5cQK92E\"}) / 1000000",
+          "expr": "sum by(address) (tron_token_holder_balance{address!~\"TBmKCtscG34xEgQdCTRMvRMKfyoABHqesx|TUPmayJ5CWWKjYFVmML2ycKXMCbyKbgtML|TKM9AYxWxRe7hESuWmKFXwcDjnb5cQK92E\"}) / 1000000000",
           "interval": "",
           "intervalFactor": 1,
           "legendFormat": "{{address}}",
@@ -678,7 +682,7 @@
     "list": []
   },
   "time": {
-    "from": "now-3h",
+    "from": "now-6h",
     "to": "now"
   },
   "timepicker": {},
