@@ -10,7 +10,7 @@ datasources:
     type: loki
     uid: Loki
     access: proxy
-    url: http://localhost:9091
+    url: http://localhost:3100
     jsonData:
       maxLines: 5000
       derivedFields:
