@@ -68,7 +68,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "sum by(address) (tron_token_total_balance) / 1000000000",
+          "expr": "(tron_token_total_balance) / 1000000000",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -160,7 +160,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "sum by(address) (tron_token_total_holders)",
+          "expr": "(tron_token_total_holders)",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -252,7 +252,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "sum by(address) (tron_token_total_transactions)",
+          "expr": "tron_token_holder_balance{address=\"TB3aa1PqpoAVGDvZ2suX4amR4Dgo9dp5Cp\"} / 1000000000",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -262,7 +262,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Transactions",
+      "title": "Shop Wallet",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -278,7 +278,8 @@
       },
       "yaxes": [
         {
-          "format": "short",
+          "$$hashKey": "object:368",
+          "format": "none",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -286,6 +287,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:369",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -623,7 +625,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "sum by(address) (tron_token_holder_balance{address!~\"TBmKCtscG34xEgQdCTRMvRMKfyoABHqesx|TUPmayJ5CWWKjYFVmML2ycKXMCbyKbgtML|TKM9AYxWxRe7hESuWmKFXwcDjnb5cQK92E\"}) / 1000000000",
+          "expr": "sum by(address) (tron_token_holder_balance{address!~\"TBmKCtscG34xEgQdCTRMvRMKfyoABHqesx|TUPmayJ5CWWKjYFVmML2ycKXMCbyKbgtML|TKM9AYxWxRe7hESuWmKFXwcDjnb5cQK92E|TB3aa1PqpoAVGDvZ2suX4amR4Dgo9dp5Cp\"}) / 1000000000",
           "interval": "",
           "intervalFactor": 1,
           "legendFormat": "{{address}}",
@@ -682,7 +684,7 @@
     "list": []
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-24h",
     "to": "now"
   },
   "timepicker": {},
